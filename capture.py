@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-    # -*- coding: utf-8 -*-
-"""
-Created on Sat Sep 29 15:50:13 2018
-
-@author: AmeeYash
-"""
 import cv2
 import argparse
 import time
@@ -14,7 +7,9 @@ import glob
 import random
 import eel
 import light
-#import winsound
+import winsound
+
+
 
 frequency=2500
 duration=1000
@@ -58,7 +53,7 @@ def detect_face():
     face=facecascade.detectMultiScale(clahe_image, scaleFactor=1.1, minNeighbors=15, minSize=(10, 10), flags=cv2.CASCADE_SCALE_IMAGE)
     if len(face)>=1:
         faceslice=crop(clahe_image, face)
-        #return faceslice
+       #retur n faceslice
     else:
         print("No/Multiple faces detected!!, passing over the frame")
 
