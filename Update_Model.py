@@ -7,7 +7,7 @@ fishface=cv2.face.FisherFaceRecognizer_create()
 data={}
 
 def update(emotions):
-    run_recognizer(emotions)
+    run_recognizer(emotion)
     print("Saving model...")
     fishface.save("model2.xml")
     print("Model saved!!")
